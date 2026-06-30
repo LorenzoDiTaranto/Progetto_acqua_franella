@@ -942,9 +942,10 @@ section[id] {
   background: rgba(238, 249, 247, 0.76);
 }
 
-.contact-form {
+.contact-panel {
   display: grid;
-  gap: 17px;
+  gap: 20px;
+  justify-items: start;
   padding: 30px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(16, 32, 51, 0.13);
@@ -952,42 +953,27 @@ section[id] {
   box-shadow: var(--shadow);
 }
 
-label {
-  display: grid;
-  gap: 8px;
-  color: var(--ink);
-  font-weight: 850;
+.contact-panel-mascot {
+  width: 126px;
+  height: 154px;
+  object-fit: contain;
 }
 
-input,
-select,
-textarea {
-  width: 100%;
-  min-height: 46px;
-  padding: 12px 13px;
-  color: var(--ink);
-  background: #fffdf7;
-  border: 1px solid rgba(16, 32, 51, 0.18);
-  border-radius: 6px;
-  font: inherit;
+.contact-panel h3 {
+  max-width: 12ch;
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+  line-height: 0.98;
 }
 
-textarea {
-  resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid rgba(102, 199, 208, 0.35);
-  border-color: var(--blue);
-}
-
-.form-note {
-  min-height: 24px;
+.contact-panel p {
+  max-width: 46ch;
   margin: 0;
-  color: var(--forest);
-  font-weight: 850;
+}
+
+.contact-panel .button {
+  margin-top: 6px;
 }
 
 .site-footer {
@@ -1264,7 +1250,7 @@ textarea:focus {
   }
 
   .impact-panel,
-  .contact-form {
+  .contact-panel {
     padding: 22px;
   }
 

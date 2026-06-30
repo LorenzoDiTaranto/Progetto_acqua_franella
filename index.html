@@ -313,39 +313,25 @@
             </p>
             <div class="contact-mascot">
               <img src="assets/mascotte-acqua-franella.png" alt="" aria-hidden="true">
-              <span data-i18n="contact.mascot">Scrivici: la prossima storia potrebbe nascere dal tuo territorio.</span>
+              <span data-i18n="contact.mascot">La prossima storia potrebbe nascere da un versante, una scuola o un paese che vuole raccontarsi meglio.</span>
             </div>
           </div>
 
-          <form class="contact-form" id="contactForm" data-reveal>
-            <label for="nome">
-              <span data-i18n="form.name">Nome</span>
-              <input id="nome" type="text" name="nome" autocomplete="name" required>
-            </label>
-            <label for="email">
-              Email
-              <input id="email" type="email" name="email" autocomplete="email" required>
-            </label>
-            <label for="profilo">
-              <span data-i18n="form.profile">Profilo</span>
-              <select id="profilo" name="profilo" required>
-                <option value="" data-i18n="form.choose">Scegli una voce</option>
-                <option data-i18n="form.option1">Università o scuola</option>
-                <option data-i18n="form.option2">Comune o ente pubblico</option>
-                <option data-i18n="form.option3">Geologo, ingegnere o tecnico</option>
-                <option data-i18n="form.option4">Impresa o sponsor</option>
-                <option data-i18n="form.option5">Cittadino o volontario</option>
-              </select>
-            </label>
-            <label for="messaggio">
-              <span data-i18n="form.message">Messaggio</span>
-              <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
-            </label>
-            <button class="button button-primary" type="submit">
-              <span data-i18n="form.submit">Invia interesse</span> <span aria-hidden="true">→</span>
-            </button>
-            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
-          </form>
+          <div class="contact-panel" data-reveal>
+            <img class="contact-panel-mascot" src="assets/mascotte-acqua-franella.png" alt="" aria-hidden="true">
+            <div>
+              <h3 data-i18n="contact.panelTitle">Un invito aperto, senza moduli da compilare.</h3>
+              <p data-i18n="contact.panelText">
+                Acqua Franella può crescere con luoghi pilota, scuole, enti,
+                tecnici e partner che vogliono rendere visibile il valore della
+                prevenzione. Prima viene la storia giusta, poi arrivano i
+                passaggi concreti.
+              </p>
+            </div>
+            <a class="button button-primary" href="#storia">
+              <span data-i18n="contact.panelCta">Rileggi la storia</span> <span aria-hidden="true">↑</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>

@@ -1,5 +1,3 @@
-const contactForm = document.querySelector("#contactForm");
-const formNote = document.querySelector("#formNote");
 const header = document.querySelector("[data-header]");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const languageToggle = document.querySelector("[data-language-toggle]");
@@ -70,19 +68,10 @@ const translations = {
     "contact.kicker": "Partecipa",
     "contact.title": "Hai un territorio, una competenza o una storia da mettere in circolo?",
     "contact.text": "Cerchiamo comuni, università, associazioni, tecnici, sponsor e cittadini che vogliano trasformare la prevenzione in una narrazione concreta e verificabile.",
-    "contact.mascot": "Scrivici: la prossima storia potrebbe nascere dal tuo territorio.",
-    "form.name": "Nome",
-    "form.profile": "Profilo",
-    "form.choose": "Scegli una voce",
-    "form.option1": "Università o scuola",
-    "form.option2": "Comune o ente pubblico",
-    "form.option3": "Geologo, ingegnere o tecnico",
-    "form.option4": "Impresa o sponsor",
-    "form.option5": "Cittadino o volontario",
-    "form.message": "Messaggio",
-    "form.submit": "Invia interesse",
-    "form.thanks": "Grazie {name}, il tuo interesse è stato registrato in questa demo.",
-    "form.thanksGeneric": "Grazie, il tuo interesse è stato registrato in questa demo.",
+    "contact.mascot": "La prossima storia potrebbe nascere da un versante, una scuola o un paese che vuole raccontarsi meglio.",
+    "contact.panelTitle": "Un invito aperto, senza moduli da compilare.",
+    "contact.panelText": "Acqua Franella può crescere con luoghi pilota, scuole, enti, tecnici e partner che vogliono rendere visibile il valore della prevenzione. Prima viene la storia giusta, poi arrivano i passaggi concreti.",
+    "contact.panelCta": "Rileggi la storia",
     "footer.text": "Progetto in sviluppo. La commercializzazione dell'acqua richiede analisi, autorizzazioni e verifiche sanitarie, ambientali e tecniche. I dreni riducono un fattore di instabilità, ma non eliminano da soli il rischio di frana."
   },
   en: {
@@ -150,19 +139,10 @@ const translations = {
     "contact.kicker": "Join us",
     "contact.title": "Do you have a territory, a skill, or a story to put in motion?",
     "contact.text": "We are looking for municipalities, universities, associations, technicians, sponsors, and citizens who want to turn prevention into a concrete and verifiable story.",
-    "contact.mascot": "Write to us: the next story could start from your territory.",
-    "form.name": "Name",
-    "form.profile": "Profile",
-    "form.choose": "Choose an option",
-    "form.option1": "University or school",
-    "form.option2": "Municipality or public body",
-    "form.option3": "Geologist, engineer, or technician",
-    "form.option4": "Company or sponsor",
-    "form.option5": "Citizen or volunteer",
-    "form.message": "Message",
-    "form.submit": "Send interest",
-    "form.thanks": "Thank you {name}, your interest has been recorded in this demo.",
-    "form.thanksGeneric": "Thank you, your interest has been recorded in this demo.",
+    "contact.mascot": "The next story could start from a slope, a school, or a village that wants to tell itself better.",
+    "contact.panelTitle": "An open invitation, with no forms to fill in.",
+    "contact.panelText": "Acqua Franella can grow with pilot places, schools, public bodies, technicians, and partners who want to make the value of prevention visible. First comes the right story, then the concrete steps.",
+    "contact.panelCta": "Read the story again",
     "footer.text": "Project in development. Commercializing water requires analyses, authorizations, and health, environmental, and technical checks. Drains reduce one instability factor, but they do not eliminate landslide risk on their own."
   }
 };
@@ -225,22 +205,6 @@ if (languageToggle) {
   languageToggle.addEventListener("click", () => {
     currentLanguage = currentLanguage === "it" ? "en" : "it";
     translate(currentLanguage);
-  });
-}
-
-if (contactForm && formNote) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const name = String(formData.get("nome") || "").trim();
-    const dictionary = translations[currentLanguage] || translations.it;
-
-    formNote.textContent = name
-      ? dictionary["form.thanks"].replace("{name}", name)
-      : dictionary["form.thanksGeneric"];
-
-    contactForm.reset();
   });
 }
 
